@@ -12,6 +12,12 @@
 		5BCC69112AE4381200E2E111 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BCC69102AE4381200E2E111 /* Assets.xcassets */; };
 		5BCC69142AE4381200E2E111 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BCC69132AE4381200E2E111 /* Preview Assets.xcassets */; };
 		5BCC691B2AE438E600E2E111 /* UColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC691A2AE438E600E2E111 /* UColors.swift */; };
+		5BCC691F2AE4476600E2E111 /* BottomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC691E2AE4476600E2E111 /* BottomTabView.swift */; };
+		5BCC69232AE453BF00E2E111 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC69222AE453BF00E2E111 /* HomeView.swift */; };
+		5BCC69252AE4540200E2E111 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC69242AE4540200E2E111 /* ChatView.swift */; };
+		5BCC69272AE4541300E2E111 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC69262AE4541300E2E111 /* SearchView.swift */; };
+		5BCC69292AE4542100E2E111 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC69282AE4542100E2E111 /* ProfileView.swift */; };
+		5BCC692B2AE4543200E2E111 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC692A2AE4543200E2E111 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +27,12 @@
 		5BCC69102AE4381200E2E111 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BCC69132AE4381200E2E111 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5BCC691A2AE438E600E2E111 /* UColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UColors.swift; sourceTree = "<group>"; };
+		5BCC691E2AE4476600E2E111 /* BottomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabView.swift; sourceTree = "<group>"; };
+		5BCC69222AE453BF00E2E111 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5BCC69242AE4540200E2E111 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		5BCC69262AE4541300E2E111 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		5BCC69282AE4542100E2E111 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		5BCC692A2AE4543200E2E111 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +65,12 @@
 		5BCC690B2AE4381200E2E111 /* edUcate */ = {
 			isa = PBXGroup;
 			children = (
+				5BCC691E2AE4476600E2E111 /* BottomTabView.swift */,
+				5BCC692A2AE4543200E2E111 /* MapView.swift */,
+				5BCC69262AE4541300E2E111 /* SearchView.swift */,
+				5BCC69282AE4542100E2E111 /* ProfileView.swift */,
+				5BCC69222AE453BF00E2E111 /* HomeView.swift */,
+				5BCC69242AE4540200E2E111 /* ChatView.swift */,
 				5BCC690C2AE4381200E2E111 /* edUcateApp.swift */,
 				5BCC690E2AE4381200E2E111 /* ContentView.swift */,
 				5BCC69102AE4381200E2E111 /* Assets.xcassets */,
@@ -140,8 +158,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BCC69292AE4542100E2E111 /* ProfileView.swift in Sources */,
 				5BCC690F2AE4381200E2E111 /* ContentView.swift in Sources */,
+				5BCC691F2AE4476600E2E111 /* BottomTabView.swift in Sources */,
 				5BCC690D2AE4381200E2E111 /* edUcateApp.swift in Sources */,
+				5BCC69272AE4541300E2E111 /* SearchView.swift in Sources */,
+				5BCC69232AE453BF00E2E111 /* HomeView.swift in Sources */,
+				5BCC69252AE4540200E2E111 /* ChatView.swift in Sources */,
+				5BCC692B2AE4543200E2E111 /* MapView.swift in Sources */,
 				5BCC691B2AE438E600E2E111 /* UColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
