@@ -22,6 +22,7 @@
 		DC16BD292AE46E0E006A10A6 /* NewsAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16BD282AE46E0E006A10A6 /* NewsAPIResponse.swift */; };
 		DC16BD2B2AE46E13006A10A6 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16BD2A2AE46E13006A10A6 /* Article.swift */; };
 		DC16BD2E2AE47DAC006A10A6 /* ArticleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16BD2D2AE47DAC006A10A6 /* ArticleListView.swift */; };
+		DC16BD302AE4815A006A10A6 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16BD2F2AE4815A006A10A6 /* SafariView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		DC16BD2A2AE46E13006A10A6 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		DC16BD2C2AE47690006A10A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DC16BD2D2AE47DAC006A10A6 /* ArticleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListView.swift; sourceTree = "<group>"; };
+		DC16BD2F2AE4815A006A10A6 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				5BCC69122AE4381200E2E111 /* Preview Content */,
 				DC16BD1D2AE461F2006A10A6 /* news.json */,
 				DC16BD2D2AE47DAC006A10A6 /* ArticleListView.swift */,
+				DC16BD2F2AE4815A006A10A6 /* SafariView.swift */,
 			);
 			path = edUcate;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			files = (
 				DC16BD2B2AE46E13006A10A6 /* Article.swift in Sources */,
 				5BCC69292AE4542100E2E111 /* ProfileView.swift in Sources */,
+				DC16BD302AE4815A006A10A6 /* SafariView.swift in Sources */,
 				5BCC690F2AE4381200E2E111 /* ContentView.swift in Sources */,
 				5BCC691F2AE4476600E2E111 /* BottomTabView.swift in Sources */,
 				5BCC690D2AE4381200E2E111 /* edUcateApp.swift in Sources */,
