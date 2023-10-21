@@ -29,21 +29,19 @@ struct Home: View {
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)){
             TabView(selection: $selectedTab) {
-                HomeView(article: .previewData[0])
-                    .listRowInsets(.init(top:0, leading: 0, bottom: 0, trailing: 0))
-                    .ignoresSafeArea(.all, edges: .all)
-                    .tag("house.fill")
+                List {
+                    HomeView(article: .previewData[0])
+                        .listRowInsets(.init(top:0, leading: 0, bottom: 0, trailing: 0))
+                }
+                .listStyle(.plain)
+                .tag("house.fill")
                 SearchView()
-                    .ignoresSafeArea(.all, edges: .all)
                     .tag("magnifyingglass")
                 MapView()
-                    .ignoresSafeArea(.all, edges: .all)
                     .tag("map.fill")
                 ChatView()
-                    .ignoresSafeArea(.all, edges: .all)
                     .tag("bubble.right.fill")
                 ProfileView()
-                    .ignoresSafeArea(.all, edges: .all)
                     .tag("person.fill")
             }
             
