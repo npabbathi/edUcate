@@ -54,7 +54,7 @@ struct Home: View {
                         }
                     } label: {
                         Image(systemName: image)
-                            .foregroundColor(selectedTab == image ? getColor(image: image) : UColors.green)
+                            .foregroundColor(selectedTab == image ? getColor(image: image) : UColors.white)
                     }
 
                 
@@ -65,8 +65,9 @@ struct Home: View {
             }
             .padding(.horizontal, 30)
             .padding(.vertical)
-            .background(UColors.white)
-            .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom)
+            .background(UColors.black)
+            .cornerRadius(12)
+            .padding(.horizontal)
         }
     }
     
