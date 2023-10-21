@@ -15,18 +15,24 @@ struct ContentView: View {
                 UColors.green
                     .ignoresSafeArea()
                 VStack {
-                    Text("LOGIN")
+                    ZStack {
+                        UColors.white
+                            .frame(width: 200, height: 200, alignment: .center)
+                            .cornerRadius(200)
+                        UColors.green
+                            .frame(width: 190, height: 190, alignment: .center)
+                            .cornerRadius(200)
+                    }
+                    Text("ED**U**CATE")
                         .font(.largeTitle)
-                        .kerning(3)
-                        .bold()
+                        .kerning(10)
                         .foregroundColor(UColors.white)
-                    TextField("Username", text: $username)
-                        .tint(UColors.white)
-                        .background(UColors.white)
-                    Image(systemName: "house.fill")
-                        .foregroundColor(UColors.white)
-                    NavigationLink("Lets go!", destination: BottomTabView())
+                    
+                    NavigationLink("GO", destination: LoginView())
                         .navigationBarBackButtonHidden(true)
+                        .buttonStyle(.bordered)
+                        .tint(UColors.white)
+                        .bold()
                 }
                 .padding()
             }
