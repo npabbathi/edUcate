@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B3B52D62AE47BC100970122 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B52D52AE47BC100970122 /* InputView.swift */; };
+		5B3B52D82AE4835900970122 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B52D72AE4835900970122 /* RegistrationView.swift */; };
 		5BCC690D2AE4381200E2E111 /* edUcateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC690C2AE4381200E2E111 /* edUcateApp.swift */; };
 		5BCC690F2AE4381200E2E111 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC690E2AE4381200E2E111 /* ContentView.swift */; };
 		5BCC69112AE4381200E2E111 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BCC69102AE4381200E2E111 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		5B3B52D52AE47BC100970122 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		5B3B52D72AE4835900970122 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		5BCC69092AE4381200E2E111 /* edUcate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = edUcate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BCC690C2AE4381200E2E111 /* edUcateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = edUcateApp.swift; sourceTree = "<group>"; };
 		5BCC690E2AE4381200E2E111 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				5BCC690C2AE4381200E2E111 /* edUcateApp.swift */,
 				5BCC690E2AE4381200E2E111 /* ContentView.swift */,
 				5BCC692C2AE47A3000E2E111 /* LoginView.swift */,
+				5B3B52D72AE4835900970122 /* RegistrationView.swift */,
 				DC16BD282AE46E0E006A10A6 /* NewsAPIResponse.swift */,
 				DC16BD2A2AE46E13006A10A6 /* Article.swift */,
 				5BCC69102AE4381200E2E111 /* Assets.xcassets */,
@@ -177,6 +180,7 @@
 				5B3B52D62AE47BC100970122 /* InputView.swift in Sources */,
 				DC16BD2B2AE46E13006A10A6 /* Article.swift in Sources */,
 				5BCC69292AE4542100E2E111 /* ProfileView.swift in Sources */,
+				5B3B52D82AE4835900970122 /* RegistrationView.swift in Sources */,
 				5BCC690F2AE4381200E2E111 /* ContentView.swift in Sources */,
 				5BCC691F2AE4476600E2E111 /* BottomTabView.swift in Sources */,
 				5BCC690D2AE4381200E2E111 /* edUcateApp.swift in Sources */,

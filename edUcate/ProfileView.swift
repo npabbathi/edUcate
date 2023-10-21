@@ -9,7 +9,19 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        Text("Profile view")
+        List {
+            Section {
+                
+            }
+            
+            Section("General") {
+                
+            }
+            
+            Section("Account") {
+                
+            }
+        }
     }
 }
 
