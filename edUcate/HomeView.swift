@@ -41,6 +41,41 @@ struct HomeView: View {
             }
             .frame(minHeight: 200, maxHeight: 300)
             .background(Color.gray.opacity(0.3))
+            .clipped()
+            
+            VStack(alignment: .leading, spacing: 8) {
+                Text(article.title)
+                    .bold()
+                    .lineLimit(3)
+                
+                Text(article.descriptionText)
+                    .lineLimit(2)
+                
+                HStack {
+                    Text(article.captionText)
+                        .lineLimit(1)
+                        .foregroundColor(.secondary)
+                        .font(.caption)
+                    
+                    Spacer()
+                    
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "bookmark")
+                    }
+                    .buttonStyle(.bordered)
+                    
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "square.and.arrow.up")
+                    }
+                    .buttonStyle(.bordered)
+                    
+                }
+            }
+            .padding([.horizontal, .bottom])
         }
     }
 }
