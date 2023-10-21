@@ -39,6 +39,7 @@
 		DC16BD1D2AE461F2006A10A6 /* news.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = news.json; sourceTree = "<group>"; };
 		DC16BD282AE46E0E006A10A6 /* NewsAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPIResponse.swift; sourceTree = "<group>"; };
 		DC16BD2A2AE46E13006A10A6 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		DC16BD2C2AE47690006A10A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 		5BCC690B2AE4381200E2E111 /* edUcate */ = {
 			isa = PBXGroup;
 			children = (
+				DC16BD2C2AE47690006A10A6 /* Info.plist */,
 				5BCC691E2AE4476600E2E111 /* BottomTabView.swift */,
 				5BCC692A2AE4543200E2E111 /* MapView.swift */,
 				5BCC69262AE4541300E2E111 /* SearchView.swift */,
@@ -310,6 +312,7 @@
 				DEVELOPMENT_TEAM = 4F9U97VJUS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = edUcate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +342,7 @@
 				DEVELOPMENT_TEAM = 4F9U97VJUS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = edUcate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

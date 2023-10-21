@@ -15,27 +15,44 @@ struct HomeView: View {
                 phase in
                 switch phase {
                 case .empty:
-                    ProgressView()
+                    HStack {
+                        Spacer()
+                        ProgressView()
+                        Spacer()
+                    }
                     
                 case .success(let image):
                     image
                         .resizable()
-                        .aspectRatio(contentMode: .fill)
+                        .aspectRatio(contentMode:
+                                .fill)
                     
                 case .failure:
-                    Image(systemName: "photo")
+                    HStack{
+                        Spacer()
+                        Image(systemName: "photo")
+                            .imageScale(.large)
+                        Spacer()
+                    }
+                    
+                @unknown default:
+                    fatalError()
                 }
             }
+            .frame(minHeight: 200, maxHeight: 300)
+            .background(Color.gray.opacity(0.3))
         }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        List {
-            HomeView(article: .previewData[0])
-                .listRowInsets(.init(top:0, leading: 0, bottom: 0, trailing: 0))
+        NavigationView {
+            List {
+                HomeView(article: .previewData[0])
+                    .listRowInsets(.init(top:0, leading: 0, bottom: 0, trailing: 0))
+            }
+            .listStyle(.plain)
         }
-        .listStyle(.plain)
     }
 }
