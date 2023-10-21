@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var username = ""
     var body: some View {
         ZStack {
             UColors.green
@@ -18,6 +19,9 @@ struct ContentView: View {
                     .kerning(3)
                     .bold()
                     .foregroundColor(UColors.white)
+                TextField("Username", text: $username)
+                    .tint(UColors.white)
+                    .background(UColors.white)
             }
             .padding()
         }
