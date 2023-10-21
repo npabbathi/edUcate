@@ -29,7 +29,8 @@ struct Home: View {
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)){
             TabView(selection: $selectedTab) {
-                HomeView()
+                HomeView(article: .previewData[0])
+                    .listRowInsets(.init(top:0, leading: 0, bottom: 0, trailing: 0))
                     .ignoresSafeArea(.all, edges: .all)
                     .tag("house.fill")
                 SearchView()
