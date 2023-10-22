@@ -10,11 +10,11 @@ import SwiftUI
 struct ProfileView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     
-    let backgroundColor : some View = UColors.white
+    let backgroundColor : some View = UColors.green
     var body: some View {
         let user = viewModel.currentUser
         ZStack {
-            UColors.blue
+            UColors.black
                 .ignoresSafeArea()
             List {
                 Section {
@@ -24,17 +24,17 @@ struct ProfileView: View {
                             .fontWeight(.semibold)
                             .foregroundColor(UColors.white)
                             .frame(width: 80, height: 80)
-                            .background(UColors.blue)
+                            .background(UColors.teal)
                             .clipShape(Circle())
                         VStack(alignment: .leading, spacing: 4) {
                             Text(user?.fullname ?? User.MOCK_USER.fullname)
                                 .font(.subheadline)
                                 .fontWeight(.semibold)
                                 .padding(.top, 4)
-                                .foregroundColor(UColors.black)
+                                .foregroundColor(UColors.white)
                             Text(user?.email ?? User.MOCK_USER.email)
                                 .font(.footnote)
-                                .foregroundColor(UColors.blue)
+                                .foregroundColor(UColors.teal)
                         }
                     }
                     .padding(.vertical, 20)
@@ -43,17 +43,17 @@ struct ProfileView: View {
                 Section {
                     HStack(spacing: 12) {
                         Image(systemName: "gear")
-                            .foregroundColor(.blue)
+                            .foregroundColor(.teal)
                         Text("VERSION")
                             .kerning(3)
-                            .foregroundColor(UColors.black)
+                            .foregroundColor(UColors.white)
                         
                         Spacer()
                         
                         Text("1.0.0")
                             .kerning(3)
                             .fontWeight(.light)
-                            .foregroundColor(UColors.blue)
+                            .foregroundColor(UColors.white)
                         
                     }
                 }
@@ -69,7 +69,7 @@ struct ProfileView: View {
                                 .foregroundColor(.red)
                             Text("SIGN OUT")
                                 .kerning(3)
-                                .foregroundColor(UColors.black)
+                                .foregroundColor(UColors.white)
                         }
                     }
                 }
