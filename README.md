@@ -13,8 +13,6 @@ edUcate is a news app oriented towards providing relevant and current news to it
 
 ## Project Structure
 
-all the files list and give description.
-
 | Page  | Purpose |
 | ------------- | ------------- |
 | edUcate Main | A list of 5 must-know current events for each day with multiple sources of information to prevent media bias. |
@@ -35,6 +33,7 @@ Install XCode, here are the instructions: [XCode Installation] (https://develope
 ## Configuration
 
 1. After opening XCode, choose the option to clone an existing repository and paste the git url from this repository.
+2. To run the app press the run icon and it will open in the XCode Simulator. Locate our app and click on it to use!
 
 ## FAQ 
 
