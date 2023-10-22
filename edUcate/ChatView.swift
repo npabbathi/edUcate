@@ -7,9 +7,27 @@
 
 import SwiftUI
 
+struct DiscussionPostModel: Hashable {
+    let username: String
+    let post: String
+    let imageName: String
+}
+
 struct ChatView: View {
     
     @Binding var text: String
+
+    let posts: [DiscussionPostModel] = [
+        DiscussionPostModel(username: "EXAMPLE USER 1",
+                            post: "What are your thoughts on the current speaker of the house situation?",
+                            imageName: "user1"),
+        DiscussionPost(username: "EXAMPLE USER 2",
+                        post: "Palestine has been Israeli occupation for around 75 years.",
+                        imageName: "user2"),
+        DiscussionPost(username: "EXAMPLE USER 3",
+                        post: "Are current students able to benefit from federal student loan forgiveness programs? If so, what is the best way to utilize them as a resource?",
+                        imageName: "user1")
+    ]
     
     var body: some View {
         ZStack{
@@ -29,96 +47,19 @@ struct ChatView: View {
                     .background(Color(.systemGray5))
                     .cornerRadius(10)
                     .padding(.horizontal, 15)
-                Spacer()
-                VStack{
-                    DiscussionPost(username: "user 1",
-                                   post: "What are your thoughts on the current speaker of the house situation? 4 score and 7 years ago some people did something and i really want this to get larger",
-                                   imageName: "user1")
-                    .padding(10)
-                    DiscussionPost(username: "user 2",
-                                   post: "i like food lalala i love food wooo hoo is this two lines yet. actually these lines need to be",
-                                   imageName: "user2")
-                    .padding(10)
-                    DiscussionPost(username: "user 3",
-                                   post: "wow im out of pics",
-                                   imageName: "user1")
-                    .padding(10)
-                }
-                .padding(10)
-            }
-        }
-    }
-}
-
-struct DiscussionPost: View {
-    
-    @State var isLiked: Bool = false
-    
-    let username: String
-    let post: String
-    let imageName: String
-    
-    var body: some View {
-        VStack {
-            HStack {
-                Image(imageName)
-                    .resizable()
-                    .frame(width: 50, height: 50, alignment: Alignment.center)
-                    .aspectRatio(contentMode: .fill)
-                    .cornerRadius(25)
-                VStack {
-                    HStack {
-                        Text(username)
-                            .foregroundColor(UColors.white)
-                            .font(.system(size: 18, weight: .semibold, design: .default))
-                        Spacer()
-                    }
-                    
-                    HStack {
-                        Text("12 minutes ago")
-                            .foregroundColor(Color(.systemGray3))
-                        Spacer()
+               
+                ZStack {
+                    ScrollView(.vertical) {
+                        VStack {
+                            ForEach(posts, id: \.self) { model in
+                                    DiscussionPost(model: model)
+                                                        .padding(10)
+                            }
+                        }.padding(10)
                     }
                 }
-                Spacer()
             }
-            
-            HStack {
-                Text(post)
-                    .font(.system(size: 20, weight: .regular, design: .default))
-                    .multilineTextAlignment(.leading)
-                    .foregroundColor(UColors.white)
-                Spacer()
-            }
-            
-            HStack {
-                Button(action: {
-                    isLiked.toggle()
-                }, label: {
-                    Text(isLiked ? "Liked" : "Like")
-                        .foregroundColor(UColors.white)
-                })
-                .padding(5)
-                Button(action: {
-                    
-                }, label: {
-                    Text("Comment")
-                        .foregroundColor(UColors.white)
-                })
-                .padding(5)
-                Button(action: {
-                    
-                }, label: {
-                    Text("Share")
-                        .foregroundColor(UColors.white)
-                })
-                .padding(5)
-            }
-            .padding()
         }
-        .padding()
-        .background(UColors.blue)
-        .cornerRadius(25)
     }
 }
 
