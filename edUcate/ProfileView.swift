@@ -9,8 +9,13 @@ import SwiftUI
 
 struct ProfileView: View {
     @EnvironmentObject var viewModel: AuthViewModel
+    
+    let backgroundColor : some View = UColors.white
     var body: some View {
         let user = viewModel.currentUser
+        ZStack {
+            UColors.blue
+                .ignoresSafeArea()
             List {
                 Section {
                     HStack {
@@ -27,15 +32,15 @@ struct ProfileView: View {
                                 .fontWeight(.semibold)
                                 .padding(.top, 4)
                                 .foregroundColor(UColors.black)
-                            Text(user?.fullname ?? User.MOCK_USER.fullname)
+                            Text(user?.email ?? User.MOCK_USER.email)
                                 .font(.footnote)
                                 .foregroundColor(UColors.blue)
                         }
                     }
-                    
+                    .padding(.vertical, 20)
                 }
-                
-                Section("General") {
+                .listRowBackground(backgroundColor)
+                Section {
                     HStack(spacing: 12) {
                         Image(systemName: "gear")
                             .foregroundColor(.blue)
@@ -52,8 +57,10 @@ struct ProfileView: View {
                         
                     }
                 }
+                .listRowBackground(backgroundColor)
+                .padding(.vertical, 20)
                 
-                Section("Account") {
+                Section {
                     Button {
                         viewModel.signOut()
                     } label: {
@@ -66,7 +73,11 @@ struct ProfileView: View {
                         }
                     }
                 }
+                .listRowBackground(backgroundColor)
+                .padding(.vertical, 20)
             }
+            .scrollContentBackground(.hidden)
+        }
         
     }
 }
