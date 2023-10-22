@@ -11,6 +11,7 @@ struct DiscussionPostModel: Hashable {
     let username: String
     let post: String
     let imageName: String
+    let timeStamp: String
 }
 
 struct ChatView: View {
@@ -20,13 +21,13 @@ struct ChatView: View {
     let posts: [DiscussionPostModel] = [
         DiscussionPostModel(username: "EXAMPLE USER 1",
                             post: "What are your thoughts on the current speaker of the house situation?",
-                            imageName: "user1"),
+                            imageName: "user1", timeStamp: "5 minutes ago"),
         DiscussionPostModel(username: "EXAMPLE USER 2",
                         post: "Palestine has been under Israeli occupation for around 75 years.",
-                        imageName: "user2"),
+                        imageName: "user2", timeStamp: "10 minutes ago"),
         DiscussionPostModel(username: "EXAMPLE USER 3",
                         post: "Are current students able to benefit from federal student loan forgiveness programs? If so, what is the best way to utilize them as a resource?",
-                        imageName: "user3")
+                        imageName: "user3", timeStamp: "20 minutes ago")
     ]
     
     var body: some View {
