@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AC2977E2AE4BB3300FFEB41 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2977D2AE4BB3300FFEB41 /* Action.swift */; };
+		2AC297802AE4BB8C00FFEB41 /* Activism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2977F2AE4BB8C00FFEB41 /* Activism.swift */; };
+		2AC297822AE4BBEB00FFEB41 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC297812AE4BBEB00FFEB41 /* MapController.swift */; };
+		2AC297842AE4C42400FFEB41 /* ActivismView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC297832AE4C42400FFEB41 /* ActivismView.swift */; };
 		5B3B52D62AE47BC100970122 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B52D52AE47BC100970122 /* InputView.swift */; };
 		5B3B52D82AE4835900970122 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B52D72AE4835900970122 /* RegistrationView.swift */; };
 		5B3B52DA2AE491B400970122 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B52D92AE491B300970122 /* User.swift */; };
@@ -43,6 +47,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2AC2977D2AE4BB3300FFEB41 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		2AC2977F2AE4BB8C00FFEB41 /* Activism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activism.swift; sourceTree = "<group>"; };
+		2AC297812AE4BBEB00FFEB41 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		2AC297832AE4C42400FFEB41 /* ActivismView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivismView.swift; sourceTree = "<group>"; };
 		5B3B52D52AE47BC100970122 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		5B3B52D72AE4835900970122 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		5B3B52D92AE491B300970122 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -136,6 +144,10 @@
 				5BCC691A2AE438E600E2E111 /* UColors.swift */,
 				5BCC69122AE4381200E2E111 /* Preview Content */,
 				DC16BD1D2AE461F2006A10A6 /* news.json */,
+				2AC2977D2AE4BB3300FFEB41 /* Action.swift */,
+				2AC2977F2AE4BB8C00FFEB41 /* Activism.swift */,
+				2AC297812AE4BBEB00FFEB41 /* MapController.swift */,
+				2AC297832AE4C42400FFEB41 /* ActivismView.swift */,
 				DC16BD2D2AE47DAC006A10A6 /* ArticleListView.swift */,
 				DC16BD2F2AE4815A006A10A6 /* SafariView.swift */,
 				DC16BD312AE48A4D006A10A6 /* NewsAPI.swift */,
@@ -233,9 +245,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AC297822AE4BBEB00FFEB41 /* MapController.swift in Sources */,
 				5B3B52D62AE47BC100970122 /* InputView.swift in Sources */,
 				DC16BD2B2AE46E13006A10A6 /* Article.swift in Sources */,
 				5BCC69292AE4542100E2E111 /* ProfileView.swift in Sources */,
+				2AC297802AE4BB8C00FFEB41 /* Activism.swift in Sources */,
 				DC16BD382AE4A4DF006A10A6 /* NewsTabView.swift in Sources */,
 				DC16BD3E2AE4B258006A10A6 /* RetryView.swift in Sources */,
 				DC16BD3A2AE4AA9A006A10A6 /* HomeScreenView.swift in Sources */,
@@ -246,6 +260,7 @@
 				5BCC691F2AE4476600E2E111 /* BottomTabView.swift in Sources */,
 				DC16BD322AE48A4D006A10A6 /* NewsAPI.swift in Sources */,
 				5BCC690D2AE4381200E2E111 /* edUcateApp.swift in Sources */,
+				2AC297842AE4C42400FFEB41 /* ActivismView.swift in Sources */,
 				5BCC69272AE4541300E2E111 /* SearchView.swift in Sources */,
 				5B3B52DA2AE491B400970122 /* User.swift in Sources */,
 				5BCC692D2AE47A3000E2E111 /* LoginView.swift in Sources */,
@@ -256,6 +271,7 @@
 				DC16BD342AE48B5F006A10A6 /* Category.swift in Sources */,
 				5B3B52DF2AE4A00C00970122 /* AuthViewModel.swift in Sources */,
 				5BCC69252AE4540200E2E111 /* ChatView.swift in Sources */,
+				2AC2977E2AE4BB3300FFEB41 /* Action.swift in Sources */,
 				5BCC692B2AE4543200E2E111 /* MapView.swift in Sources */,
 				5BCC691B2AE438E600E2E111 /* UColors.swift in Sources */,
 			);

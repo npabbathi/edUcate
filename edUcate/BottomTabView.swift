@@ -21,6 +21,7 @@ struct BottomTabView_Previews: PreviewProvider {
 
 struct Home: View {
     @State var selectedTab = "person.fill"
+    @StateObject var mapController = MapController()
     
     init() {
         UITabBar.appearance().isHidden = true
@@ -35,9 +36,16 @@ struct Home: View {
                 }
                 .listStyle(.plain)
                 .tag("house.fill")
+                NavigationStack {
+                    MapView(mapController: mapController)
+                }
+                    .searchable(text: $mapController.searchTerm)
+                    .foregroundColor(UColors.white)
+                    .onSubmit(of: .search) {
+                        mapController.search()
+                    }
                 NewsTabView()
                     .tag("graduationcap.fill")
-                MapView()
                     .tag("map.fill")
                 ChatView(text: .constant(""))
                     .tag("bubble.right.fill")
