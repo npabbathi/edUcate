@@ -13,21 +13,28 @@ struct ArticleListView: View {
     @State private var selectedArticle: Article?
     
     var body: some View {
-        List {
-            ForEach(articles) { article in
-                HomeView(article: article)
-                    .onTapGesture {
-                        selectedArticle = article
-                    }
+        ZStack {
+            UColors.black
+                .ignoresSafeArea()
+            List {
+                ForEach(articles) { article in
+                    HomeView(article: article)
+                        .onTapGesture {
+                            selectedArticle = article
+                        }
+                }
+                .listRowBackground(Capsule())
+                .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
             }
-            .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
-            .listRowSeparator(.hidden)
+            .listStyle(.plain)
+            .sheet(item: $selectedArticle){
+                SafariView(url: $0.articleURL)
+                    .edgesIgnoringSafeArea(.bottom)
+            }
+            .scrollContentBackground(.hidden)
         }
-        .listStyle(.plain)
-        .sheet(item: $selectedArticle){
-            SafariView(url: $0.articleURL)
-                .edgesIgnoringSafeArea(.bottom)
-        }
+        .tint(UColors.white)
+        
     }
 }
 
