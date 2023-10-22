@@ -35,6 +35,10 @@ struct RegistrationView: View {
                         UColors.blue
                             .frame(width: 190, height: 190, alignment: .center)
                             .cornerRadius(200)
+                        Image("logoGreen")
+                            .resizable(resizingMode: .stretch)
+                            .aspectRatio(contentMode: .fit)
+                            .shadow(radius: 5)
                     }
                     Spacer()
                     

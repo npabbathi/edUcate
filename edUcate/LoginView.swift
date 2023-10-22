@@ -29,6 +29,10 @@ struct LoginView: View {
                         UColors.green
                             .frame(width: 190, height: 190, alignment: .center)
                             .cornerRadius(200)
+                        Image("logo")
+                            .resizable(resizingMode: .stretch)
+                            .aspectRatio(contentMode: .fit)
+                            .shadow(radius: 5)
                     }
                     Text("ED**U**CATE")
                         .font(.largeTitle)
