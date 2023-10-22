@@ -39,14 +39,14 @@ struct Home: View {
                 NavigationStack {
                     MapView(mapController: mapController)
                 }
-                    .searchable(text: $mapController.searchTerm)
-                    .foregroundColor(UColors.white)
-                    .onSubmit(of: .search) {
-                        mapController.search()
-                    }
+                .searchable(text: $mapController.searchTerm)
+                .foregroundColor(UColors.white)
+                .onSubmit(of: .search) {
+                    mapController.search()
+                }
+                .tag("map.fill")
                 NewsTabView()
                     .tag("graduationcap.fill")
-                    .tag("map.fill")
                 ChatView(text: .constant(""))
                     .tag("bubble.right.fill")
                 ProfileView()
