@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AC2977E2AE4BB3300FFEB41 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2977D2AE4BB3300FFEB41 /* Action.swift */; };
+		2AC297802AE4BB8C00FFEB41 /* Activism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2977F2AE4BB8C00FFEB41 /* Activism.swift */; };
+		2AC297822AE4BBEB00FFEB41 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC297812AE4BBEB00FFEB41 /* MapController.swift */; };
+		2AC297842AE4C42400FFEB41 /* ActivismView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC297832AE4C42400FFEB41 /* ActivismView.swift */; };
 		5B3B52D62AE47BC100970122 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B52D52AE47BC100970122 /* InputView.swift */; };
 		5BCC690D2AE4381200E2E111 /* edUcateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC690C2AE4381200E2E111 /* edUcateApp.swift */; };
 		5BCC690F2AE4381200E2E111 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC690E2AE4381200E2E111 /* ContentView.swift */; };
@@ -26,6 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2AC2977D2AE4BB3300FFEB41 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		2AC2977F2AE4BB8C00FFEB41 /* Activism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activism.swift; sourceTree = "<group>"; };
+		2AC297812AE4BBEB00FFEB41 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		2AC297832AE4C42400FFEB41 /* ActivismView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivismView.swift; sourceTree = "<group>"; };
 		5B3B52D52AE47BC100970122 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		5BCC69092AE4381200E2E111 /* edUcate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = edUcate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BCC690C2AE4381200E2E111 /* edUcateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = edUcateApp.swift; sourceTree = "<group>"; };
@@ -91,6 +99,10 @@
 				5BCC691A2AE438E600E2E111 /* UColors.swift */,
 				5BCC69122AE4381200E2E111 /* Preview Content */,
 				DC16BD1D2AE461F2006A10A6 /* news.json */,
+				2AC2977D2AE4BB3300FFEB41 /* Action.swift */,
+				2AC2977F2AE4BB8C00FFEB41 /* Activism.swift */,
+				2AC297812AE4BBEB00FFEB41 /* MapController.swift */,
+				2AC297832AE4C42400FFEB41 /* ActivismView.swift */,
 			);
 			path = edUcate;
 			sourceTree = "<group>";
@@ -174,17 +186,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AC297822AE4BBEB00FFEB41 /* MapController.swift in Sources */,
 				5B3B52D62AE47BC100970122 /* InputView.swift in Sources */,
 				DC16BD2B2AE46E13006A10A6 /* Article.swift in Sources */,
 				5BCC69292AE4542100E2E111 /* ProfileView.swift in Sources */,
+				2AC297802AE4BB8C00FFEB41 /* Activism.swift in Sources */,
 				5BCC690F2AE4381200E2E111 /* ContentView.swift in Sources */,
 				5BCC691F2AE4476600E2E111 /* BottomTabView.swift in Sources */,
 				5BCC690D2AE4381200E2E111 /* edUcateApp.swift in Sources */,
+				2AC297842AE4C42400FFEB41 /* ActivismView.swift in Sources */,
 				5BCC69272AE4541300E2E111 /* SearchView.swift in Sources */,
 				5BCC692D2AE47A3000E2E111 /* LoginView.swift in Sources */,
 				DC16BD292AE46E0E006A10A6 /* NewsAPIResponse.swift in Sources */,
 				5BCC69232AE453BF00E2E111 /* HomeView.swift in Sources */,
 				5BCC69252AE4540200E2E111 /* ChatView.swift in Sources */,
+				2AC2977E2AE4BB3300FFEB41 /* Action.swift in Sources */,
 				5BCC692B2AE4543200E2E111 /* MapView.swift in Sources */,
 				5BCC691B2AE438E600E2E111 /* UColors.swift in Sources */,
 			);
