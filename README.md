@@ -2,6 +2,8 @@
 
 edUcate is a news app oriented towards providing relevant and current news to its users. It is designed to provide a holistic and thorough understanding of world events to create a more informed public.
 
+[App Demo](https://www.youtube.com/watch?v=7fqm-3XMBTY&feature=youtu.be)
+
 ## Table of contents
 
 - Project Structure
