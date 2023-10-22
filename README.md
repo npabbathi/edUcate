@@ -28,7 +28,7 @@ XCode and having cloned this repository.
 
 ## Installation
 
-Install XCode, here are the instructions: [XCode Installation] (https://developer.apple.com/xcode/)
+Install XCode, here are the instructions: [XCode Installation](https://developer.apple.com/xcode/)
 
 ## Configuration
 
