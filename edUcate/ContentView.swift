@@ -8,33 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var username = ""
+    @EnvironmentObject var viewModel : AuthViewModel
     var body: some View {
-        NavigationStack {
-            ZStack {
-                UColors.green
-                    .ignoresSafeArea()
-                VStack {
-                    ZStack {
-                        UColors.white
-                            .frame(width: 200, height: 200, alignment: .center)
-                            .cornerRadius(200)
-                        UColors.green
-                            .frame(width: 190, height: 190, alignment: .center)
-                            .cornerRadius(200)
-                    }
-                    Text("ED**U**CATE")
-                        .font(.largeTitle)
-                        .kerning(10)
-                        .foregroundColor(UColors.white)
-                    
-                    NavigationLink("GO", destination: LoginView())
-                        .navigationBarBackButtonHidden(true)
-                        .buttonStyle(.bordered)
-                        .tint(UColors.white)
-                        .bold()
-                }
-                .padding()
+        Group {
+            if (viewModel.userSession != nil) {
+                BottomTabView()
+            } else if (viewModel.userSession == nil) {
+                LoginView()
+            } else {
+                ProfileView()
             }
         }
     }

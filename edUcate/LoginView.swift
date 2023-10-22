@@ -12,6 +12,8 @@ struct LoginView: View {
     @State var email = ""
     @State var password = ""
     
+    @EnvironmentObject var viewModel : AuthViewModel
+    
     
     var body: some View {
         NavigationStack {
@@ -36,17 +38,15 @@ struct LoginView: View {
                     
                     VStack(spacing: 24) {
                         InputView(text: $email, placeholder: "EMAIL")
-                            .multilineTextAlignment(.center)
-                            .kerning(5)
-                            .shadow(radius: 5)
+                            .autocorrectionDisabled()
                         InputView(text: $password, placeholder: "PASSWORD", isSecureField: true)
-                            .multilineTextAlignment(.center)
-                            .kerning(5)
-                            .shadow(radius: 5)
+                            .autocorrectionDisabled()
                     }
                     
                     Button {
-                        print("logging in")
+                        Task {
+                            try await viewModel.signIn(withEmail: email, password: password)
+                        }
                     } label: {
                         HStack {
                             Text("LOGIN")
@@ -60,6 +60,8 @@ struct LoginView: View {
                     .cornerRadius(40)
                     .padding()
                     .shadow(radius: 5)
+                    .disabled(!formIsValid)
+                    .opacity(formIsValid ? 1.0 : 0.5)
 
                     
                     Spacer()
@@ -78,6 +80,12 @@ struct LoginView: View {
             }
         }
         .tint(.white)
+    }
+}
+
+extension LoginView: AuthenticationFormProtocol {
+    var formIsValid: Bool {
+        return !email.isEmpty && email.contains("@") && !password.isEmpty && password.count > 5
     }
 }
 

@@ -14,6 +14,8 @@ struct RegistrationView: View {
     @State var password = ""
     @State var confirmPassword = ""
     
+    @EnvironmentObject var viewModel : AuthViewModel
+    
     @Environment(\.dismiss) var dismiss
     var body: some View {
         NavigationStack {
@@ -38,29 +40,39 @@ struct RegistrationView: View {
                     
                     VStack(spacing: 24) {
                         InputView(text: $email, placeholder: "EMAIL")
-                            .multilineTextAlignment(.center)
-                            .kerning(5)
-                            .shadow(radius: 5)
-                        
-                        InputView(text: $fullname, placeholder: "FULL NAME")
-                            .multilineTextAlignment(.center)
-                            .kerning(5)
-                            .shadow(radius: 5)
-                        
-                        InputView(text: $password, placeholder: "PASSWORD", isSecureField: true)
-                            .multilineTextAlignment(.center)
-                            .kerning(5)
-                            .shadow(radius: 5)
                             .autocorrectionDisabled()
                         
-                        InputView(text: $confirmPassword, placeholder: "CONFIRM PASSWORD", isSecureField: true)
-                            .multilineTextAlignment(.center)
-                            .kerning(5)
-                            .shadow(radius: 5)
+                        InputView(text: $fullname, placeholder: "FULL NAME")
+                            .autocorrectionDisabled()
+                        
+                        InputView(text: $password, placeholder: "PASSWORD", isSecureField: true)
+                            .autocorrectionDisabled()
+                        
+                        ZStack(alignment: .trailing) {
+                            InputView(text: $confirmPassword, placeholder: "CONFIRM PASSWORD", isSecureField: true)
+                            
+                            if (!password.isEmpty && !confirmPassword.isEmpty) {
+                                if (password == confirmPassword) {
+                                    Image(systemName: "checkmark.circle.fill")
+                                        .imageScale(.large)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.green)
+                                        .padding()
+                                } else {
+                                    Image(systemName: "xmark.circle.fill")
+                                        .imageScale(.large)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.red)
+                                        .padding()
+                                }
+                            }
+                        }
                     }
                     
                     Button {
-                        print("signing user up")
+                        Task {
+                            try await viewModel.createUser(withEmail: email, password: password, fullname: fullname)
+                        }
                     } label: {
                         HStack {
                             Text("SIGN UP")
@@ -74,6 +86,8 @@ struct RegistrationView: View {
                     .cornerRadius(40)
                     .padding()
                     .shadow(radius: 5)
+                    .disabled(!formIsValid)
+                    .opacity(formIsValid ? 1.0 : 0.5)
                     
                     
                     Spacer()
@@ -93,6 +107,13 @@ struct RegistrationView: View {
         
     }
 }
+
+extension RegistrationView: AuthenticationFormProtocol {
+    var formIsValid: Bool {
+        return !email.isEmpty && email.contains("@") && !password.isEmpty && password.count > 5 && !fullname.isEmpty && password == confirmPassword
+    }
+}
+    
 
 struct RegistrationView_Previews: PreviewProvider {
     static var previews: some View {

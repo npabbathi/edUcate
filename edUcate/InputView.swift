@@ -20,12 +20,18 @@ struct InputView: View {
                     .padding()
                     .background(UColors.white)
                     .cornerRadius(50)
+                    .tint(UColors.blue)
+                    .multilineTextAlignment(.center)
+                    .shadow(radius: 10)
             } else {
                 TextField(placeholder, text: $text)
                     .font(.system(size: 14))
                     .padding()
                     .background(UColors.white)
                     .cornerRadius(50)
+                    .tint(UColors.blue)
+                    .multilineTextAlignment(.center)
+                    .shadow(radius: 10)
             }
         }
     }
