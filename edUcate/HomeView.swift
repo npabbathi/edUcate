@@ -14,7 +14,7 @@ struct HomeView: View {
             ZStack {
                 UColors.green
                     .ignoresSafeArea()
-                VStack(alignment: .leading, spacing: 16){
+                VStack(alignment: .center, spacing: 16){
                     AsyncImage(url: article.imageURL) {
                         phase in
                         switch phase {
@@ -27,9 +27,12 @@ struct HomeView: View {
                             
                         case .success(let image):
                             image
-                                .resizable()
+                                .resizable(resizingMode: .stretch)
                                 .aspectRatio(contentMode:
-                                        .fill)
+                                        .fit)
+                                .cornerRadius(10)
+                                .padding()
+                                .frame(maxHeight: 200)
                             
                         case .failure:
                             HStack{
@@ -44,8 +47,7 @@ struct HomeView: View {
                         }
                     }
                     .frame(minHeight: 200, maxHeight: 300)
-                    .background(Color.gray.opacity(0.3))
-                    .frame(width: UIScreen.main.bounds.width - 20)
+                    //.background(Color.gray.opacity(0.3))
                     
                     VStack(alignment: .leading, spacing: 8) {
                         Text(article.title)
