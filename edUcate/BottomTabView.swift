@@ -30,11 +30,7 @@ struct Home: View {
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)){
             TabView(selection: $selectedTab) {
-                List {
-                    HomeView(article: .previewData[0])
-                        .listRowInsets(.init(top:0, leading: 0, bottom: 0, trailing: 0))
-                }
-                .listStyle(.plain)
+                MajorNewsHomeView()
                 .tag("house.fill")
                 NavigationStack {
                     MapView(mapController: mapController)
@@ -72,24 +68,25 @@ struct Home: View {
             }
             .padding(.horizontal, 30)
             .padding(.vertical)
-            .background(UColors.black)
+            .background(UColors.blue)
             .cornerRadius(12)
             .padding(.horizontal)
         }
     }
     
     func getColor(image: String) -> Color {
+        let selectedColor : some View = Color("ULightTeal")
         switch image {
         case "house.fill":
-            return UColors.teal
+            return selectedColor as! Color
         case "graduationcap.fill":
-            return UColors.teal
+            return selectedColor as! Color
         case "map.fill":
-            return UColors.teal
+            return selectedColor as! Color
         case "person.fill":
-            return UColors.teal
+            return selectedColor as! Color
         case "bubble.right.fill":
-            return UColors.teal
+            return selectedColor as! Color
         default:
             return Color.red //error
         }
