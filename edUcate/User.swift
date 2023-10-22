@@ -8,6 +8,8 @@
 import Foundation
 
 struct User: Identifiable, Codable {
+    
+    //vars
     let id: String
     let fullname: String
     let email: String
