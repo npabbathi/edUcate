@@ -24,7 +24,7 @@ struct DiscussionPost: View {
                     }
                     
                     HStack {
-                        Text("\(Int.random(in: 2 ..< 60)) minutes ago")
+                        Text(model.timeStamp)
                             .foregroundColor(Color(.systemGray3))
                         Spacer()
                     }
