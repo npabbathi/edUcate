@@ -6,7 +6,7 @@
 //
 
 import Foundation
-//test
+
 struct NewsAPIResponse: Decodable {
     
     let status: String
