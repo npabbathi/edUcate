@@ -39,7 +39,7 @@ struct Home: View {
                     .tag("graduationcap.fill")
                 MapView()
                     .tag("map.fill")
-                ChatView()
+                ChatView(text: .constant(""))
                     .tag("bubble.right.fill")
                 ProfileView()
                     .tag("person.fill")
