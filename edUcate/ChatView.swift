@@ -22,7 +22,7 @@ struct ChatView: View {
                             post: "What are your thoughts on the current speaker of the house situation?",
                             imageName: "user1"),
         DiscussionPostModel(username: "EXAMPLE USER 2",
-                        post: "Palestine has been Israeli occupation for around 75 years.",
+                        post: "Palestine has been under Israeli occupation for around 75 years.",
                         imageName: "user2"),
         DiscussionPostModel(username: "EXAMPLE USER 3",
                         post: "Are current students able to benefit from federal student loan forgiveness programs? If so, what is the best way to utilize them as a resource?",
