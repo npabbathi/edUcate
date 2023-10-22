@@ -21,11 +21,14 @@ struct NewsTabView: View {
                 .onAppear {
                     loadTask()
                 }
+                .onChange(of: articleNewsVM.selectedCategory) { _ in loadTask()
+                }
                 .navigationTitle(articleNewsVM.selectedCategory.text)
                 .toolbarColorScheme(.dark, for: .navigationBar)
                 .toolbarBackground(UColors.black, for: .navigationBar)
                 .toolbarBackground(.visible, for: .navigationBar)
                 .navigationBarTitleDisplayMode(.inline)
+                .navigationBarItems(trailing: menu)
 
         }
     }
@@ -56,6 +59,20 @@ struct NewsTabView: View {
             await articleNewsVM.loadArticles()
         }
     }
+    
+    private var menu: some View {
+        Menu {
+            Picker("Category", selection: $articleNewsVM.selectedCategory){
+                ForEach(Category.allCases) {
+                    Text($0.text).tag($0)
+                }
+            }
+        } label: {
+            Image(systemName: "fiberchannel")
+                .imageScale(.large)
+        }
+    }
+
 }
 
 
