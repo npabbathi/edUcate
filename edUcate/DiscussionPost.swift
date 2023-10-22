@@ -66,7 +66,7 @@ struct DiscussionPost: View {
             .padding()
         }
         .padding()
-        .background(UColors.blue)
+        .background(UColors.green)
         .cornerRadius(25)
     }
 }
