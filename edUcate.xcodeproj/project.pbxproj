@@ -20,6 +20,7 @@
 		5B3B52E42AE4A49B00970122 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5B3B52E32AE4A49B00970122 /* FirebaseFirestore */; };
 		5B3B52E62AE4A49B00970122 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 5B3B52E52AE4A49B00970122 /* FirebaseFirestoreSwift-Beta */; };
 		5B3B52E82AE4A49B00970122 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5B3B52E72AE4A49B00970122 /* FirebaseStorage */; };
+		5B3B52EA2AE556AF00970122 /* DiscussionPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B52E92AE556AF00970122 /* DiscussionPost.swift */; };
 		5BCC690D2AE4381200E2E111 /* edUcateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC690C2AE4381200E2E111 /* edUcateApp.swift */; };
 		5BCC690F2AE4381200E2E111 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC690E2AE4381200E2E111 /* ContentView.swift */; };
 		5BCC69112AE4381200E2E111 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BCC69102AE4381200E2E111 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		5B3B52D92AE491B300970122 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5B3B52DB2AE4983C00970122 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5B3B52DE2AE4A00C00970122 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		5B3B52E92AE556AF00970122 /* DiscussionPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionPost.swift; sourceTree = "<group>"; };
 		5BCC69092AE4381200E2E111 /* edUcate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = edUcate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BCC690C2AE4381200E2E111 /* edUcateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = edUcateApp.swift; sourceTree = "<group>"; };
 		5BCC690E2AE4381200E2E111 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				5B3B52D92AE491B300970122 /* User.swift */,
 				5BCC69222AE453BF00E2E111 /* HomeView.swift */,
 				5BCC69242AE4540200E2E111 /* ChatView.swift */,
+				5B3B52E92AE556AF00970122 /* DiscussionPost.swift */,
 				5BCC690C2AE4381200E2E111 /* edUcateApp.swift */,
 				5BCC690E2AE4381200E2E111 /* ContentView.swift */,
 				5BCC692C2AE47A3000E2E111 /* LoginView.swift */,
@@ -264,6 +267,7 @@
 				5BCC69272AE4541300E2E111 /* SearchView.swift in Sources */,
 				5B3B52DA2AE491B400970122 /* User.swift in Sources */,
 				5BCC692D2AE47A3000E2E111 /* LoginView.swift in Sources */,
+				5B3B52EA2AE556AF00970122 /* DiscussionPost.swift in Sources */,
 				DC16BD292AE46E0E006A10A6 /* NewsAPIResponse.swift in Sources */,
 				DC16BD2E2AE47DAC006A10A6 /* ArticleListView.swift in Sources */,
 				5BCC69232AE453BF00E2E111 /* HomeView.swift in Sources */,

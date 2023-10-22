@@ -21,10 +21,10 @@ struct ChatView: View {
         DiscussionPostModel(username: "EXAMPLE USER 1",
                             post: "What are your thoughts on the current speaker of the house situation?",
                             imageName: "user1"),
-        DiscussionPost(username: "EXAMPLE USER 2",
+        DiscussionPostModel(username: "EXAMPLE USER 2",
                         post: "Palestine has been Israeli occupation for around 75 years.",
                         imageName: "user2"),
-        DiscussionPost(username: "EXAMPLE USER 3",
+        DiscussionPostModel(username: "EXAMPLE USER 3",
                         post: "Are current students able to benefit from federal student loan forgiveness programs? If so, what is the best way to utilize them as a resource?",
                         imageName: "user1")
     ]
@@ -52,7 +52,7 @@ struct ChatView: View {
                     ScrollView(.vertical) {
                         VStack {
                             ForEach(posts, id: \.self) { model in
-                                    DiscussionPost(model: model)
+                                DiscussionPost(model: model)
                                                         .padding(10)
                             }
                         }.padding(10)
