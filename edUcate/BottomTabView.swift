@@ -36,8 +36,6 @@ struct Home: View {
                 }
                 .listStyle(.plain)
                 .tag("house.fill")
-                SearchView()
-                    .tag("magnifyingglass")
                 NavigationStack {
                     MapView(mapController: mapController)
                 }
@@ -46,8 +44,10 @@ struct Home: View {
                     .onSubmit(of: .search) {
                         mapController.search()
                     }
+                NewsTabView()
+                    .tag("graduationcap.fill")
                     .tag("map.fill")
-                ChatView()
+                ChatView(text: .constant(""))
                     .tag("bubble.right.fill")
                 ProfileView()
                     .tag("person.fill")
@@ -82,7 +82,7 @@ struct Home: View {
         switch image {
         case "house.fill":
             return UColors.teal
-        case "magnifyingglass":
+        case "graduationcap.fill":
             return UColors.teal
         case "map.fill":
             return UColors.teal
@@ -97,4 +97,4 @@ struct Home: View {
     }
 }
 
-var tabs = ["house.fill", "magnifyingglass", "map.fill", "bubble.right.fill", "person.fill"]
+var tabs = ["house.fill", "graduationcap.fill", "map.fill", "bubble.right.fill", "person.fill"]
